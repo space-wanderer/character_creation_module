@@ -3,6 +3,7 @@ from graphic_arts import start_game_banner
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Атака."""
     caused_damage = 'нанёс урон противнику равный'
     if char_class == 'warrior':
         return (f'{char_name} {caused_damage} {5 + randint(3, 5)}')
@@ -14,6 +15,7 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Блокировка."""
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
     if char_class == 'mage':
@@ -24,6 +26,7 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Умение."""
     applied_the_skill = 'применил специальное умение'
     if char_class == 'warrior':
         return (f'{char_name} {applied_the_skill} «Выносливость {80 + 25}»')
@@ -35,6 +38,7 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Реализация игры."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
@@ -59,6 +63,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
+    """Определение персонажа."""
     approve_choice: str = None
     char_class: str = None
     while approve_choice != 'y':
